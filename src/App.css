@@ -1,0 +1,8 @@
+.App {
+    font-family: "SB 어그로 B";
+}
+
+@font-face {
+    font-family: "SB 어그로 B";
+    src: url(../src/assets/fonts/SB\ 어그로\ B.ttf);
+}

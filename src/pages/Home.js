@@ -3,8 +3,14 @@ import React from 'react';
 import styled from 'styled-components';
 import PangImage from '../assets/homecat.jpg';
 import Button from 'react-bootstrap/Button';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
+    const navigate = useNavigate();
+
+    const handleClickButton = () => {
+        navigate('/question');
+    }
 
     return (
         <Wrapper>
@@ -15,7 +21,7 @@ const Home = () => {
                 <img src={PangImage}  class="rounded-circle" width={350} height={350}></img>
             </LogoImage>
             <Desc>MBTI를 기반으로 하는 나랑 잘맞는 고양이 찾기!</Desc>
-            <Button>테스트 시작하기</Button>
+            <Button style={{fontFamily: "SB 어그로 B"}} onClick={handleClickButton}>테스트 시작하기</Button>
             </Contents>
         </Wrapper>
     )
@@ -26,6 +32,7 @@ export default Home;
 const Wrapper = styled.div`
  height: 100vh;
  width: 100%;
+ background-color: tomato;
 `
 
 const Header = styled.div`
@@ -33,6 +40,8 @@ font-size: 40pt;
 display: flex;
 justify-content: center;
 align-items: center;
+font-family: "SB 어그로 B";
+background-color: yellow;
 `
 
 const Contents = styled.div`
@@ -54,4 +63,5 @@ const LogoImage = styled.div`
 const Desc = styled.div`
  font-size: 20pt;
  margin-top: 20px;
+ font-family: "SB 어그로 B"
  `
